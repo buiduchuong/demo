@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="test2ModelStoreContainer" CdmEntityContainer="test2Entities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="test2Model.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="stt" ColumnName="stt" />
+          <ScalarProperty Name="Acount" ColumnName="Acount" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Bookie" ColumnName="Bookie" />
+          <ScalarProperty Name="Bol" ColumnName="Bol" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="Rules" ColumnName="Rules" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dashbroads">
+      <EntityTypeMapping TypeName="test2Model.Dashbroad">
+        <MappingFragment StoreEntitySet="Dashbroad">
+          <ScalarProperty Name="stt" ColumnName="stt" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Bookie" ColumnName="Bookie" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="Rules" ColumnName="Rules" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

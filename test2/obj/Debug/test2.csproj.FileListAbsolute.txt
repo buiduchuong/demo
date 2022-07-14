@@ -1,0 +1,15 @@
+E:\c#-work\test2\test2\bin\Debug\test2.exe.config
+E:\c#-work\test2\test2\bin\Debug\test2.exe
+E:\c#-work\test2\test2\bin\Debug\test2.pdb
+E:\c#-work\test2\test2\obj\Debug\test2.csprojAssemblyReference.cache
+E:\c#-work\test2\test2\obj\Debug\test2.Form1.resources
+E:\c#-work\test2\test2\obj\Debug\test2.Properties.Resources.resources
+E:\c#-work\test2\test2\obj\Debug\test2.csproj.GenerateResource.cache
+E:\c#-work\test2\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+E:\c#-work\test2\test2\obj\Debug\test2.exe
+E:\c#-work\test2\test2\obj\Debug\test2.pdb
+E:\c#-work\test2\test2\bin\Debug\EntityFramework.dll
+E:\c#-work\test2\test2\bin\Debug\EntityFramework.SqlServer.dll
+E:\c#-work\test2\test2\bin\Debug\EntityFramework.xml
+E:\c#-work\test2\test2\bin\Debug\EntityFramework.SqlServer.xml
+E:\c#-work\test2\test2\obj\Debug\test2.csproj.CopyComplete

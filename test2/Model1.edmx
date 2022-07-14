@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="test2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Acount" Type="nvarchar" MaxLength="20" />
+          <Property Name="Company" Type="nvarchar" MaxLength="20" />
+          <Property Name="Bookie" Type="nvarchar" MaxLength="20" />
+          <Property Name="Bol" Type="nvarchar" MaxLength="20" />
+          <Property Name="Channel" Type="nvarchar" MaxLength="20" />
+          <Property Name="Rules" Type="nvarchar" MaxLength="20" />
+          <Property Name="State" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Dashbroad">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" />
+          <Property Name="Bookie" Type="nvarchar" MaxLength="20" />
+          <Property Name="Channel" Type="nvarchar" MaxLength="20" />
+          <Property Name="Rules" Type="nvarchar" MaxLength="20" />
+          <Property Name="S" Type="nvarchar" MaxLength="20" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="test2ModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dashbroad" EntityType="Self.Dashbroad" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="test2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Acount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bookie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bol" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Channel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Rules" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Dashbroad">
+          <Key>
+            <PropertyRef Name="stt" />
+          </Key>
+          <Property Name="stt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bookie" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Channel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Rules" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="S" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="test2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Dashbroads" EntityType="Self.Dashbroad" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="test2ModelStoreContainer" CdmEntityContainer="test2Entities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="test2Model.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="stt" ColumnName="stt" />
+                <ScalarProperty Name="Acount" ColumnName="Acount" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Bookie" ColumnName="Bookie" />
+                <ScalarProperty Name="Bol" ColumnName="Bol" />
+                <ScalarProperty Name="Channel" ColumnName="Channel" />
+                <ScalarProperty Name="Rules" ColumnName="Rules" />
+                <ScalarProperty Name="State" ColumnName="State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dashbroads">
+            <EntityTypeMapping TypeName="test2Model.Dashbroad">
+              <MappingFragment StoreEntitySet="Dashbroad">
+                <ScalarProperty Name="stt" ColumnName="stt" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Bookie" ColumnName="Bookie" />
+                <ScalarProperty Name="Channel" ColumnName="Channel" />
+                <ScalarProperty Name="Rules" ColumnName="Rules" />
+                <ScalarProperty Name="S" ColumnName="S" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
